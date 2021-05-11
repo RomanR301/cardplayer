@@ -1,0 +1,134 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.about {
+  & .page-header__bg {
+    @media (max-width: $breakpoint-md) {
+      padding-top: 30px;
+    }
+  }
+  &-content {
+    margin: 80px 0;
+    & .intro-image {
+      position: relative;
+      margin-bottom: 35px;
+      & .bg-image {
+        height: 440px;
+      }
+      & .main-image {
+        position: absolute;
+        display: block;
+        width: 92%;
+        top: 5%;
+        left: 4%;
+        height: 90%;
+        object-fit: contain;
+        @media (max-width: $breakpoint-lg) {
+          top: 75px;
+          height: 300px;
+          object-fit: contain;
+          object-position: left;
+        }
+      }
+      & .single-image {
+        display: block;
+        width: 100%;
+      }
+    }
+    & h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: $blackColor;
+      line-height: 1.3;
+    }
+    & h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    & h4 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    & p {
+      margin-bottom: 16px;
+    }
+    & ul {
+      list-style: disc;
+      padding: 0 0 0 16px;
+    }
+  }
+}
+
+.value {
+  @media (max-width: $breakpoint-xl) {
+    width: 90%;
+    margin: auto;
+  }
+  @media (max-width: $breakpoint-lg) {
+    width: 100%;
+  }
+  & .col-12 {
+    margin-bottom: 35px;
+  }
+  &-box {
+    background: linear-gradient(90deg, #161B39 0%, #1A4540 100%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 -15px;
+    border-radius: 6px;
+    overflow: hidden;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0;
+    }
+    & .row {
+      background-image: url('../img/background-grid.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 10px;
+    width: 80%;
+    margin: auto;
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+      padding: 40px 10px;
+    }
+  }
+  &-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: $whiteColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    & img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+  }
+  &-title {
+    font-size: 20px;
+    font-weight: 700;
+    width: 90%;
+    margin: auto auto 14px auto;
+    @media (max-width: $breakpoint-lg) {
+      width: 80%;
+    }
+  }
+  &-title, &-description {
+    color: $whiteColor;
+    text-align: center;
+  }
+  &-description {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+}

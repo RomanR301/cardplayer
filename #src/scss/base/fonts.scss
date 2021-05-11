@@ -1,0 +1,41 @@
+// @include font("CircularStd", "CircularStd-Bold", "700", "normal");
+// @include font("CircularStd", "CircularStd-Medium", "500", "normal");
+// @include font("CircularStd", "CircularStd-Book", "350", "normal");
+
+// @include font("ProximaNova", "ProximaNova-Bold", "700", "normal");
+// @include font("ProximaNova", "ProximaNova-Semibold", "600", "normal");
+// @include font("ProximaNova", "ProximaNova-Regular", "400", "normal");
+
+// @include font("SFProText", "SFProText-Semibold", "600", "normal");
+// @include font("SFProText", "SFProText-Regular", "400", "normal");
+
+@include font("WorkSans", "WorkSans-Bold", "700", "normal");
+@include font("WorkSans", "WorkSans-Medium", "500", "normal");
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?h7lkbl');
+  src:  url('../fonts/icomoon.eot?h7lkbl#iefix') format('embedded-opentype'),
+    // url('../fonts/icomoon.ttf?h7lkbl') format('truetype'),
+    url('../fonts/icomoon.woff?h7lkbl') format('woff'),
+    url('../fonts/icomoon.svg?h7lkbl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,78 @@
+@@include('_header.html')
+<main class="page-programs-list overlaped-heading">
+  <div class="page-header">
+    <div class="page-header__bg">
+      <div class="container">
+        <div class="row align-center">
+          <div class="col-xs-12">
+            <h1>Affiliate Programs</h1>
+            <p>Et quidem rerum necessitatibus saepe eveniet, ut dolore disputandum putant sed ut aut. Quid ex eo ortum,
+              tam egregios viros censes aut odit aut odit aut.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="programs-list">
+    <div class="container container-overlaped">
+      <div class="row table-row">
+        <div class="programs-search">
+          <form action="">
+            <div class="form-group">
+              <input type="search" name="blog-search" placeholder="Find affiliate programs">
+              <button type="submit">
+                <i class="icon-icon-search"></i>
+              </button>
+            </div>
+            <div class="form-group form-select">
+              <span>Category</span>
+              <select name="programs-list-category">
+                <option value="Casino">Casino</option>
+                <option value="Sportsbook">Sportsbook</option>
+                <option value="Bingo">Bingo</option>
+                <option value="Poker">Poker</option>
+                <option value="Lottery">Lottery</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="programs-list-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Affiliate Programs</th>
+                <th>Rev Share</th>
+                <th>CPA</th>
+                <th>Sub Aff</th>
+                <th>Ratings</th>
+              </tr>
+            </thead>
+            <tbody>
+              @@include('_affiliate-programs-item-component.html')
+              @@include('_affiliate-programs-item-component.html')
+              @@include('_affiliate-programs-item-component.html')
+              @@include('_affiliate-programs-item-component.html')
+              @@include('_affiliate-programs-item-component.html')
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row pagination-container">
+        <div class="pagination-results">
+          Showing 10 result of 90 entry
+        </div>
+        <div class="pagination">
+          <a href="#" class="page-numbers prev-page">Prev</a>
+          <a href="#" class="page-numbers active">1</a>
+          <a href="#" class="page-numbers">2</a>
+          <a href="#" class="page-numbers">3</a>
+          <div class="page-numbers dots">...</div>
+          <a href="#" class="page-numbers">9</a>
+          <a href="#" class="page-numbers next-page">Next</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+@@include('_footer.html')

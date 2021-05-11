@@ -1,0 +1,173 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @media (max-width: $breakpoint-md) {
+    overflow: initial;
+  }
+  &-form {
+    width: 35vw;
+    padding: 4vh 3vw 4vh 4vw;
+    overflow-y: auto;
+    height: 100%;
+    @media (max-width: $breakpoint-xl) {
+      padding: 4vh 4vw;
+    }
+    @media (max-width: $breakpoint-lg) {
+      width: 45vw;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  &-image {
+    width: 65vw;
+    height: calc(100% + 30px);
+    @media (max-width: $breakpoint-lg) {
+      width: 55vw;
+    }
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
+    & img {
+      margin-left: 25px;
+      @include defaultIcon(cover);
+      @media (max-width: $breakpoint-xl) {
+        margin: 0;
+      }
+    }
+  }
+  &-logo {
+    display: flex;
+    margin-bottom: 4.2vh;
+    width: 10vw;
+    & img {
+      @include defaultIcon(contain);
+      @media (max-width: $breakpoint-md) {
+        width: 175px;
+      }
+    }
+    @media (max-width: $breakpoint-xl) {
+      width: 180px;
+    }
+    @media (max-width: $breakpoint-md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 4px rgba(0,0,0,.1);
+    }
+  }
+  &-heading {
+    font-size: 1.6vw;
+    font-weight: 700;
+    color: $darkGreen;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 28px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-top: 60px;
+    }
+  }
+  &-helper {
+    font-size: 1vw;
+    color: $grayColor;
+    margin-bottom: 3vh;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 16px;
+    }
+  }
+  & .form-group {
+    margin-bottom: 2.2vh;
+    & label {
+      font-size: 0.65vw;
+      @media (max-width: 1400px) {
+        font-size: 12px;
+      }
+    }
+    & input {
+      height: 4.2vh;
+      font-size: .7vw;
+      @media (max-width: 1400px) {
+        font-size: 12px;
+        height: 40px;
+      }
+    }
+  }
+  & .phone-container {
+    & select {
+      width: 3.5vw;
+      font-size: .7vw;
+      @media (max-width: 1400px) {
+        width: 60px;
+        font-size: 12px;
+        
+      }
+    }
+    &:before {
+      top: calc(50% - .9vh);
+      font-size: .6vw;
+      left: 2.1vw;
+      @media (max-width: 1500px) {
+        top: calc(50% - .8vh);
+        left: 2.2vw;
+      }
+      @media (max-width: 1400px) {
+        left: 37px;
+        top: 13px;
+        font-size: 10px;
+      }
+    }
+  }
+  & .form-checkbox {
+    label {
+      @media (min-width: 2000px) {
+        font-size: 20px;
+      }
+      @media (max-width: $breakpoint-xl) {
+        font-size: 14px;
+      }
+    }
+  }
+  & .form-submit {
+    width: 8.5vw;
+    height: 4.2vh;
+    @media (max-width: $breakpoint-xl) {
+      width: 150px;
+      height: 40px;
+    }
+    & .btn {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.sign-in-link {
+  margin-top: 9vh;
+  font-size: .9vw;
+  @media (max-width: $breakpoint-xl) {
+    font-size: 14px;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin-top: 30px;
+  }
+  & a {
+    color: rgba(4, 62, 111, 1);
+    border-bottom: 1px solid transparent;
+    @include transition(.3);
+    &:hover {
+      border-color: rgba(4, 62, 111, 1);
+    }
+  }
+}

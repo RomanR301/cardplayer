@@ -1,0 +1,58 @@
+@@include('_header.html')
+<main class="overlaped-heading">
+  <div class="page-header">
+    <div class="page-header__bg">
+      <div class="container">
+        <div class="row align-center">
+          <div class="col-lg-8 col-xs-12">
+            <h1>Get In Touch</h1>
+            <p>Et quidem rerum necessitatibus saepe eveniet, ut dolore disputandum putant sed ut aut. Quid ex eo ortum,
+              tam egregios viros censes aut odit aut odit aut.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="contacts">
+    <div class="container container-overlaped">
+      <div class="row align-center">
+        <div class="col-md-8 col-xs-12">
+          <form action="">
+            <div class="contacts-box">
+              <div class="form-group">
+                <label for="contacts-name">Name <span>*</span></label>
+                <input type="text" name="contacts-name" id="contacts-name" required placeholder="Enter name">
+              </div>
+              <div class="form-group">
+                <label for="contacts-email">Email <span>*</span></label>
+                <input type="email" name="contacts-email" id="contacts-email" required placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="contacts-phone">Phone Number <span class="optional">(Optional)  </span></label>
+                <div class="phone-container">
+                  <select name="phone-code">
+                    <option value="+01">+01</option>
+                    <option value="+02">+02</option>
+                    <option value="+03">+03</option>
+                    <option value="+04">+04</option>
+                  </select>
+                  <input type="number" name="contacts-phone" id="contacts-phone" required placeholder="Enter number">
+                </div>
+              </div>
+              <div class="form-group form-textarea">
+                <label for="contacts-text">Comments <span>*</span></label>
+                <textarea name="contacts-text" id="contacts-text" placeholder="Enter text here…"></textarea>
+              </div>
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+@@include('_footer.html')

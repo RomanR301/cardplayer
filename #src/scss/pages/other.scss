@@ -1,0 +1,35 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.other-page {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg,#161b39 0,#1a4540 64.23%);
+  overflow: hidden;
+  & .container,
+  & .row {
+    height: 100%;
+  }
+  & .col-xs-12 {
+    text-align: center;
+  }
+  & h1 {
+    font-size: 150px;
+    font-weight: 700;
+    color: $whiteColor;
+    @media (max-width: $breakpoint-md) {
+      font-size: 60px;
+    }
+  }
+  & p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: $whiteColor;
+  }
+  & .btn {
+    &:hover {
+      border-color: $whiteColor;
+      background: $whiteColor;
+    }
+  }
+}
