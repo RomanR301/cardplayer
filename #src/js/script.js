@@ -19,7 +19,7 @@ let front = {
             slidesPerView: 'auto',
             spaceBetween: 30,
             allowTouchMove: true,
-            centeredSlides: true,
+            // centeredSlides: true,
           },
           767: {
             slidesPerView: 6,

@@ -869,16 +869,11 @@ input[type=number] {
   position: static;
 }
 
-.has-featured-item .blog-item-container:first-child .blog__date {
-  position: static;
-  margin: 0;
-}
-
 .has-featured-item .blog-item-container:first-child .blog__description {
   order: 2;
   margin-bottom: 16px;
   color: #ffffff;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .has-featured-item .blog-item-container:first-child .blog__author {
@@ -896,6 +891,11 @@ input[type=number] {
   height: 14px;
   display: block;
   margin: 0 12px 0 12px;
+}
+
+.has-featured-item .blog-item-container:first-child .blog__author .blog__date {
+  position: static;
+  margin: 0;
 }
 
 .has-featured-item .blog-item-container:first-child .blog__title {
@@ -989,7 +989,7 @@ input[type=number] {
   font-weight: 700;
   display: inline;
   transition: all 0.35s linear;
-  background: linear-gradient(180deg, #3A2767 0, #3A2767 98%);
+  background: linear-gradient(180deg, #3a2767 0, #3a2767 98%);
   background-size: 0 3px;
   background-repeat: no-repeat;
   background-position: left 100%;
@@ -2388,6 +2388,10 @@ button.swiper-pagination-bullet {
   flex-direction: column;
 }
 
+.main-screen .col-lg-9 {
+  position: relative;
+}
+
 .blog-item__featured {
   height: 350px;
   display: flex;
@@ -3723,6 +3727,15 @@ button.swiper-pagination-bullet {
     margin: auto;
   }
 
+  .blog-item-container {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .blog__image {
+    height: 200px;
+  }
+
   .interviews-item {
     flex: 0 0 50%;
     max-width: 50%;
@@ -4013,11 +4026,6 @@ button.swiper-pagination-bullet {
     margin: 30px 0 16px 0;
   }
 
-  .blog-item-container {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
   .footer-image-left {
     object-fit: contain;
     width: 350px;
@@ -4059,6 +4067,15 @@ button.swiper-pagination-bullet {
     margin: 30px 0 30px 0;
   }
 
+  .main-screen__header .btn {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .main-screen .blog-list {
+    margin-bottom: 30px;
+  }
+
   .interviews {
     background: #3A2767;
   }
@@ -4067,8 +4084,21 @@ button.swiper-pagination-bullet {
     display: none;
   }
 
+  .interviews__header .btn-outline {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .podcasts__header .btn {
+    display: none;
+  }
+
+  .featured {
+    padding: 20px 0 50px 0;
+  }
+
   .featured .swiper-slide {
-    width: 40%;
+    width: 35%;
   }
 
   .featured .swiper-pagination {
@@ -4361,6 +4391,10 @@ button.swiper-pagination-bullet {
     height: 270px;
   }
 
+  .has-featured-item .blog-item-container:first-child .blog__badge {
+    position: absolute;
+  }
+
   .has-featured-item .blog-item-container:first-child .blog__description {
     color: #333333;
     order: 3;
@@ -4372,6 +4406,14 @@ button.swiper-pagination-bullet {
 
   .has-featured-item .blog-item-container:first-child .blog__author span {
     color: #333333;
+  }
+
+  .has-featured-item .blog-item-container:first-child .blog__author .blog__date {
+    position: absolute;
+  }
+
+  .has-featured-item .blog-item-container:first-child .blog__author .blog__date span {
+    color: #999;
   }
 
   .has-featured-item .blog-item-container:first-child .blog__title h2 {
