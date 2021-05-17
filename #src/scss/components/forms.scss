@@ -29,9 +29,9 @@
     border: 1px solid #C1C1C1;
     border-radius: 2px;
     @include transition(.3);
-    &:focus {
-      border-color: $primaryColor;
-    }
+    // &:focus {
+    //   border-color: $whiteColor;
+    // }
   }
   & input {
     height: 40px;

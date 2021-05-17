@@ -1,7 +1,8 @@
-// @include font("CircularStd", "CircularStd-Bold", "700", "normal");
-// @include font("CircularStd", "CircularStd-Medium", "500", "normal");
-// @include font("CircularStd", "CircularStd-Book", "350", "normal");
+@include font("CircularStd", "CircularStd-Bold", "700", "normal");
+@include font("CircularStd", "CircularStd-Medium", "500", "normal");
+@include font("CircularStd", "CircularStd-Book", "350", "normal");
 
+@include font("AppleChanceryRegular", "AppleChanceryRegular", "400", "normal");
 // @include font("ProximaNova", "ProximaNova-Bold", "700", "normal");
 // @include font("ProximaNova", "ProximaNova-Semibold", "600", "normal");
 // @include font("ProximaNova", "ProximaNova-Regular", "400", "normal");
@@ -9,8 +10,8 @@
 // @include font("SFProText", "SFProText-Semibold", "600", "normal");
 // @include font("SFProText", "SFProText-Regular", "400", "normal");
 
-@include font("WorkSans", "WorkSans-Bold", "700", "normal");
-@include font("WorkSans", "WorkSans-Medium", "500", "normal");
+// @include font("WorkSans", "WorkSans-Bold", "700", "normal");
+// @include font("WorkSans", "WorkSans-Medium", "500", "normal");
 
 
 @font-face {

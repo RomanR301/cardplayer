@@ -1,0 +1,328 @@
+.has-featured-item {
+  & .blog-item-container:first-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 350px;
+    @media (max-width: $breakpoint-sm) {
+      height: auto;
+    }
+    & .blog-item {
+      position: relative;
+      height: 100%;
+      justify-content: flex-end;
+      padding: 24px 21px;
+      cursor: default;
+      @media (max-width: $breakpoint-sm) {
+        padding: 0;
+      }
+      &:hover {
+        & .blog__title h2 {
+          color: $whiteColor;
+          background-size: 100% 3px;
+          @media (max-width: $breakpoint-sm) {
+            color: $defaultText;
+          }
+        }
+      }
+    }
+    & .blog-main {
+      display: flex;
+      flex-direction: column;
+      max-width: 70%;
+      @media (max-width: $breakpoint-sm) {
+        max-width: 100%;
+      }
+    }
+    & .blog__image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      @media (max-width: $breakpoint-sm) {
+        position: static;
+        z-index: 1;
+        pointer-events: all;
+        height: 270px;
+      }
+    }
+    & .blog__badge {
+      width: fit-content;
+      position: static;
+    }
+    & .blog__date {
+      position: static;
+      margin: 0;
+    }
+    & .blog__description {
+      order: 2;
+      margin-bottom: 16px;
+      color: $whiteColor;
+      opacity: .8;
+      @media (max-width: $breakpoint-sm) {
+        color: $defaultText;
+        order: 3; 
+      }
+    }
+    & .blog__author {
+      order: 3;
+      @media (max-width: $breakpoint-sm) {
+        order: 2;
+      }
+      & span {
+        color: $whiteColor;
+        @media (max-width: $breakpoint-sm) {
+          color: $defaultText;
+        }
+      }
+      &_favourite {
+       &:after {
+        content: "";
+        background: #c7c7c7;
+        width: 1px;
+        height: 14px;
+        display: block;
+        margin: 0 12px 0 12px;
+       }
+      }
+    }
+    & .blog__title {
+      margin-bottom: 8px;
+      & h2 {
+        color: $whiteColor;
+        font-size: 20px;
+        font-weight: 700;
+        display: inline;
+        transition: all 0.35s linear;
+        background: linear-gradient(180deg,$whiteColor 0,$whiteColor 98%);
+        background-size: 0 3px;
+        background-repeat: no-repeat;
+        background-position: left 100%;
+        @media (max-width: $breakpoint-sm) {
+          color: $defaultText;
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.blog {
+  &-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include transition(0.3);
+    &:hover {
+      .blog__title h2 {
+        color: $purpleColor;
+        background-size: 100% 3px;
+      }
+    }
+    &-container {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+      padding: 0 12px;
+      margin-bottom: 32px;
+      @media (max-width: $breakpoint-md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      @media (max-width: $breakpoint-sm) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  &__image {
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    & img {
+      @include defaultIcon(cover);
+    }
+    @media (max-width: $breakpoint-sm) {
+      height: 270px;
+    }
+  }
+  &-main {
+    padding-top: 20px;
+    position: relative;
+  }
+  &__badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    background: #f1f1f1;
+    border-radius: 4px;
+    color: #2c1959;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 10px 12px;
+  }
+  &__date {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    & span {
+      color: #999999;
+      font-size: 12px;
+    }
+  }
+  &__title {
+    display: block;
+    & h2 {
+      font-size: 20px;
+      font-weight: 700;
+      display: inline;
+      transition: all 0.35s linear;
+      background: linear-gradient(180deg, #3A2767 0, #3A2767 98%);
+      background-size: 0 3px;
+      background-repeat: no-repeat;
+      background-position: left 100%;
+      @media (max-width: $breakpoint-sm) {
+        background: transparent;
+      }
+    }
+  }
+  &__author {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    & .by-text {
+      font-family: "AppleChanceryRegular";
+      font-size: 12px;
+      color: #1e172f;
+    }
+    &_name {
+      display: flex;
+      align-items: center;
+      &:after {
+        content: "";
+        background: #c7c7c7;
+        width: 1px;
+        height: 14px;
+        display: block;
+        margin: 0 12px 0 8px;
+      }
+      & i {
+        margin-right: 4px;
+        font-size: 12px;
+      }
+      & span {
+        margin-right: 4px;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+    }
+    &_favourite {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        & i:before {
+          color: #d81010;
+        }
+      }
+      & i {
+        font-size: 12px;
+        &:before {
+          @include transition(.3);
+        }
+      }
+      & span {
+        margin-left: 6px;
+        font-size: 14px;
+        line-height: 1;
+      }
+    }
+  }
+  &__description {
+    font-size: 14px;
+    color: $grayColor;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+  }
+}
+.interviews {
+  &-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 15px;
+    @media (max-width: $breakpoint-lg) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    @media (max-width: $breakpoint-sm) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    & .blog-item {
+      background: $whiteColor;
+      border-radius: 10px;
+    }
+    &:hover {
+      & .blog__title h2 {
+        color: $defaultText;
+      }
+    }
+    & .blog__date {
+      left: 10px;
+    }
+    & .blog__image {
+      border-radius: 10px 10px 0 0;
+      &:hover {
+        & .blog__title h2 {
+          color: $defaultText;
+        }
+      }
+    }
+    & .blog-main {
+      padding: 20px 10px 10px 10px;
+    }
+    & .blog__title h2 {
+      color: $defaultText;
+      display: inline;
+      font-size: 20px;
+      display: inline;
+      transition: all 0.35s linear;
+      background: linear-gradient(180deg, $defaultText 0, $defaultText 98%);
+      background-size: 0 3px;
+      background-repeat: no-repeat;
+      background-position: left 100%;
+      @media (max-width: $breakpoint-sm) {
+        background: transparent;
+      }
+    }
+  }
+}
+.podcasts {
+  & .blog {
+    &-item {
+      &-container {
+        flex: 0 0 25%;
+        max-width: 25%;
+        @media (max-width: $breakpoint-lg) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        @media (max-width: $breakpoint-sm) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

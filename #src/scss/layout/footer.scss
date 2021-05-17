@@ -2,12 +2,27 @@
 @import "../abstracts/variables";
 
 .footer {
-  margin-top: 240px;
-  background: linear-gradient(270deg, #387B74 0%, #1A4540 100%);
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  background: #1E172F;
   position: relative;
-  @media (max-width: $breakpoint-md) {
-    margin-top: 360px;
+  &-image {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    &-left {
+      left: 0;
+      @media (max-width: $breakpoint-md) {
+        object-fit: contain;
+        width: 350px;
+        height: auto;
+      }
+    }
+    &-right {
+      right: 0;
+      transform: rotate(180deg);
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
   }
   &:before {
     content: '';
@@ -16,22 +31,22 @@
     height: 1px;
     left: 0;
     bottom: 53px;
-    opacity: 0.2;
+    opacity: 0.1;
     position: absolute;
     z-index: 2;
   }
   &-main {
-    padding: 113px 0 40px;
-    @media (max-width: $breakpoint-md) {
-      padding: 100px 0 0 0;
+    padding: 60px 0;
+    @media (max-width: $breakpoint-lg) {
+      padding: 30px 0;
     }
   }
-  & .container {
-    z-index: 1;
-    position: relative;
-  }
-  & .row {
-    justify-content: space-between;
+  &-logo {
+    display: flex;
+    width: 125px;
+    & img {
+      @include defaultIcon(contain);
+    }
   }
   &-bg {
     position: absolute;
@@ -47,11 +62,16 @@
   &-column {
     padding: 0 12px;
     z-index: 1;
-    @media (max-width: $breakpoint-md) {
-      width: 100%;
+    width: 20%;
+    @media (max-width: $breakpoint-lg) {
+      width: 33%;
       margin-bottom: 25px;
     }
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
     &.logo-column {
+      width: 30%;
       @media (max-width: $breakpoint-lg) {
         width: 100%;
         justify-content: center;
@@ -67,7 +87,7 @@
     font-size: 18px;
     font-weight: 700;
     color: $whiteColor;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
   &__list {
     & li {
@@ -77,7 +97,7 @@
   &__link {
     font-size: 14px;
     color: $whiteColor;
-    opacity: 0.6;
+    opacity: 0.7;
     position: relative;
     &:before {
       content: '';
@@ -128,5 +148,15 @@
         margin-bottom: 25px;
       }
     }
+  }
+}
+.socials-column {
+  & span {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: $whiteColor;
+    opacity: .7;
   }
 }

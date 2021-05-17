@@ -4,6 +4,33 @@ let front = {
   $body: $('body'),
   init: function () {
       this.events();
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        spaceBetween: 60,
+        allowTouchMove: false,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: { 
+          320: {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            allowTouchMove: true,
+            centeredSlides: true,
+          },
+          767: {
+            slidesPerView: 6,
+            spaceBetween: 30,
+            centeredSlides: false,
+            allowTouchMove: false,
+          },
+        }
+
+      });
+      swiper.mousewheel.disable();
   },
   toggleNav: function () {
     if (!this.hamburger.hasClass('open')) {
@@ -36,39 +63,14 @@ let front = {
       document.getElementById(tabName).style.display = "block";
       $(element).addClass('active');
   },
-  hoverTab: function (el, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tabName).style.display = "block";
-    el.currentTarget.className += " active";
-  },
-
   events: function () {
       let self = this;
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
-
-      $(document).on('click', '.search i', function () {
-        $('.form-group').toggleClass('active');
-        });
-      $(document).on("click", function(event){
-            var $trigger = $(".search");
-            if($trigger !== event.target && !$trigger.has(event.target).length){
-              $('.form-group').removeClass('active')
-            }            
-        });
       if(window.matchMedia('(max-width: 992px)').matches){
-        $('.menu-item-has-children').click(function () {
-          $(this).toggleClass('active');
+        $('.menu-item-has-children i').click(function () {
+          $(this).parent().toggleClass('active');
         },
       )};
       $(document).ready(function() {
@@ -88,154 +90,20 @@ let front = {
   }
 };
 
-let modal = {
-  closeButton: $('.modal__close'),
-  closeOverlay: $('.modal'),
-  can: 1,
-  init: function () {
-      this.events();
-  },
-  openModal: function (id) {
-      let modalWindow = $(id);
-      modalWindow.fadeIn();
-      modalWindow.find('.modal__content').removeClass('animate-away').addClass('animate-in');
+document.addEventListener("DOMContentLoaded", function (event) {
 
-      $('body, html').addClass('active');
-  },
+	let childrenItem = document.querySelectorAll('.menu-item-has-children');
+	for (let i = 0; i < childrenItem.length; i++) {
+			var btn = document.createElement("i");   // Create a <button> element
+			btn.className = "toggle-sub-menu icon icon-chevron";                    // add class
+			childrenItem[i].appendChild(btn);
+	}
 
-  closeModal: function (id) {
-      let modalWindow = $(id);
-      modalWindow.find('.modal__content').removeClass('animate-in').addClass('animate-away');
-      modalWindow.fadeOut();
-      $('body, html').removeClass('active');
-  },
-
-  events: function () {
-
-      $(document).on('click', '.modalTrigger', function (e) {
-          e.preventDefault();
-          let self = $(this),
-              target = self.attr('data-modal');
-          modal.openModal(target);
-
-      });
-
-      $(document).on('click', '.modal', function (event) {
-          let self = '#' + $(this).attr('id');
-          if (event.target.className == 'modal__body') {
-              modal.closeModal(self);
-          }
-      });
-
-      $(document).on('click', '.modal__close', function () {
-          let self = '#' + $(this).closest('.modal').attr('id');
-          modal.closeModal(self);
-      });
-        $(document).on('click', '.scroll-to-top i', function () {
-            $('body,html').animate({
-                scrollTop : 0                       // Scroll to top of body
-            }, 500);
-      });
-
-
-  }
-};
-
+});
 
 jQuery(function () {
   front.init();
-  modal.init();
-    
 });
-
-// $(window).scroll(function () {
-//   if ($(this).scrollTop() > 10) {
-//     $('.scroll-to-top').addClass("scrolled");
-//   } else {
-//   	$('.scroll-to-top').removeClass("scrolled");
-//   }
-// });
-
-document.body.addEventListener('keyup', function(e) {
-  if (e.which === 9) /* tab */ {
-    document.body.classList.remove('no-focus-outline');
-  }
-});
-
-
-// HIDE MENU ON BODY CLICK
-
-
-
-$('.summary-sidebar__link').click(function(){
-  $('html, body').animate({
-      scrollTop: $( $(this).attr('href') ).offset().top - 390
-  }, 500);
-  return false;
-});
-
-const highlightScroll = () => {
-  const scrollPos =  window.pageYOffset + 400
-  const links = document.querySelectorAll('.summary-sidebar__link')
-  const scrollLine = document.querySelector('.scroll-spy-line')
-
-  links.forEach((link, index) => {
-      const sections = document.querySelectorAll('.anchor-link')
-      const activeSection = sections[index]
-      const compare = activeSection.offsetTop <= scrollPos && (activeSection.offsetTop + activeSection.offsetHeight > scrollPos)
-
-      if(scrollPos > 0) {
-          compare ? link.classList.add('active') : link.classList.remove('active')
-      }
-  })
-  if ($('.summary-sidebar__link:nth-of-type(1)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,0)')
-  } else if ($('.summary-sidebar__link:nth-of-type(2)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,50px)')
-  } else if ($('.summary-sidebar__link:nth-of-type(3)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,100px)')
-  } else if ($('.summary-sidebar__link:nth-of-type(4)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,150px)')
-  } else if ($('.summary-sidebar__link:nth-of-type(5)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,200px)')
-  } else if ($('.summary-sidebar__link:nth-of-type(6)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,250px)')
-  } else if ($('.summary-sidebar__link:nth-of-type(7)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,300px)')
-  } else if ($('.summary-sidebar__link:nth-of-type(8)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,350px)')
-  } else if ($('.summary-sidebar__link:nth-of-type(9)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,400px)')
-  } else if ($('.summary-sidebar__link:nth-of-type(10)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,450px)')
-  } else if ($('.summary-sidebar__link:nth-of-type(11)').hasClass('active')) {
-    $('.scroll-line').css('transform', 'translate(0,500px)')
-  }
-
-  
-
-  // if ($('.summary-sidebar__link:nth-of-type(1)').hasClass('active')) {
-  //   $('.scroll-line').attr('class', 'scroll-line scroll1')
-  // } else if ($('.summary-sidebar__link:nth-of-type(2)').hasClass('active')) {
-  //   $('.scroll-line').css('transform', 'translate(0,49px)')
-  // } else if ($('.summary-sidebar__link:nth-of-type(3)').hasClass('active')) {
-  //   $('.scroll-line').attr('class', 'scroll-line scroll3')
-  // } else if ($('.summary-sidebar__link:nth-of-type(4)').hasClass('active')) {
-  //   $('.scroll-line').attr('class', 'scroll-line scroll4')
-  // } else if ($('.summary-sidebar__link:nth-of-type(5)').hasClass('active')) {
-  //   $('.scroll-line').attr('class', 'scroll-line scroll5')
-  // } else if ($('.summary-sidebar__link:nth-of-type(6)').hasClass('active')) {
-  //   $('.scroll-line').attr('class', 'scroll-line scroll6')
-  // } else if ($('.summary-sidebar__link:nth-of-type(7)').hasClass('active')) {
-  //   $('.scroll-line').attr('class', 'scroll-line scroll7')
-  // } else if ($('.summary-sidebar__link:nth-of-type(8)').hasClass('active')) {
-  //   $('.scroll-line').attr('class', 'scroll-line scroll8')
-  // } else if ($('.summary-sidebar__link:nth-of-type(9)').hasClass('active')) {
-  //   $('.scroll-line').attr('class', 'scroll-line scroll9')
-  // }
-}
-window.addEventListener('scroll', highlightScroll)
-
 
 $(function() {
   

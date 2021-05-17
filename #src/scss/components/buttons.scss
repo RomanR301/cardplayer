@@ -2,59 +2,20 @@
 @import "../abstracts/variables";
 
 .btn {
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 400;
-  background: transparent;
-  border: 2px solid transparent;
-  padding: 10px 31px;
-  text-decoration: none;
+  font-family: inherit;
+  border: 1px solid transparent;
+  padding: 9px 18px;
   display: inline-block;
-  border-radius: 4px;
-  cursor: pointer;
   @include transition(.3);
-  &-primary {
-    border-color: $primaryColor;
-    background: $primaryColor;
-    color: $whiteColor;
-    &:hover {
-      background: transparent;
-      color: $primaryColor;
-    }
-  }
-  &-secondary {
-    background: #F3F3F3;
-    color: $defaultText;
+  font-size: 12px;
+  font-weight: 700;
+  &-outline {
+    color: #2C1959;
+    border-color: #2C1959;
+    border-radius: 4px;
     &:hover {
       color: $whiteColor;
-      background: $primaryColor;
-    }
-    &.view-more {
-      margin-top: 30px;
-    }
-  }
-  &-hover-outline {
-    border-color: #F3F3F3;
-    background: #F3F3F3;
-    color: $defaultText;
-    &:hover {
-      background: transparent;
-      color: $whiteColor;
-    }
-  }
-  &-transparent {
-    background: rgba(243, 243, 243, .12);
-    color: $whiteColor;
-    &:hover {
-      border-color: $whiteColor;
-    }
-  }
-  &-white {
-    background: $whiteColor;
-    color: $primaryColor;
-    &:hover {
-      background: $primaryColor;
-      color: $whiteColor;
+      background: #2C1959;
     }
   }
 }
