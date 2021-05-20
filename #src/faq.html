@@ -1,188 +1,90 @@
 @@include('_header.html')
-<main class="page-programs-list overlaped-heading">
-  <div class="page-header">
-    <div class="page-header__bg">
-      <div class="container">
-        <div class="row align-center">
-          <div class="col-xs-12">
-            <h1>FAQ</h1>
-            <p>Et quidem rerum necessitatibus saepe eveniet, ut dolore disputandum putant sed ut aut. Quid ex eo ortum,
-              tam egregios viros censes aut odit aut odit aut.</p>
-          </div>
+<main>
+  <section class="faq">
+    <div class="container container">
+      <h1 class="section-title section-title-decor">FAQ</h1>
+      <div class="row tabs">
+        <div class="col-lg-3 col-xs-12">
+          <ul class="tabs-list tabs-ul">
+            <li class="tabs-list__item">
+              <a href="#" onclick="front.openTab(this, 'tab-0','.tabs')" class="tabs-list__item_link tab-links active">
+                General Information</a>
+            </li>
+            <li class="tabs-list__item">
+              <a onclick="front.openTab(this, 'tab-1','.tabs')" class="tabs-list__item_link tab-links">
+                Commissions</a>
+            </li>
+            <li class="tabs-list__item">
+              <a onclick="front.openTab(this, 'tab-2','.tabs')" class="tabs-list__item_link tab-links">
+                Payments</a>
+            </li>
+            <li class="tabs-list__item">
+              <a onclick="front.openTab(this, 'tab-3','.tabs')" class="tabs-list__item_link tab-links">
+                Promotions</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </div>
-  <section class="faq faq-single">
-    <div class="container container-overlaped">
-      <div class="row align-center">
-        <div class="col-md-12 col-xs-12">
-          <div class="accordion-container">
-            <div class="accordion__item">
-              <a class="accordion__button" href="#">
-                What is an Affiliate Program?
-                <i class="accordion__arrow"></i>
-              </a>
-              <div class="accordion__content">
-                <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                  Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through your
-                  sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                  generates profit for you.
-                </p>
-              </div>
-            </div>
-            <div class="accordion__item">
-              <a class="accordion__button" href="#">
-                How do I earn money through your program?
-                <i class="accordion__arrow"></i>
-              </a>
-              <div class="accordion__content">
-                <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                  Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through your
-                  sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                  generates profit for you.
-                </p>
-              </div>
-            </div>
-            <div class="accordion__item">
-              <a class="accordion__button" href="#">
-                What are the highest paying affiliate programs around?
-                <i class="accordion__arrow"></i>
-              </a>
-              <div class="accordion__content">
-                <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                  Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through your
-                  sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                  generates profit for you.
-                </p>
-              </div>
-            </div>
-            <div class="accordion__item">
-              <a class="accordion__button" href="#">
-                Which programs pay commissions in Bitcoin?
-                <i class="accordion__arrow"></i>
-              </a>
-              <div class="accordion__content">
-                <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                  Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through your
-                  sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                  generates profit for you.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="row tabs">
-        <div class="col-md-3 col-xs-12 dropdown-container">
-          <div class="dropdown-helper">Menu Selection</div>
-          <div class="dropdown">
-            <div class="caption">General Information</div>
-            <ul class="tabs-list tabs-ul">
-              <li class="tabs-list__item">
-                <a onclick="front.openTab(this, 'tab-0','.tabs')" class="tabs-list__item_link tab-links active"
-                  title="Casino">General Information</a>
-              </li>
-              <li class="tabs-list__item">
-                <a onclick="front.openTab(this, 'tab-1','.tabs')" class="tabs-list__item_link tab-links"
-                  title="Casino">Commissions</a>
-              </li>
-              <li class="tabs-list__item">
-                <a onclick="front.openTab(this, 'tab-2','.tabs')" class="tabs-list__item_link tab-links"
-                  title="Casino">Payments</a>
-              </li>
-              <li class="tabs-list__item">
-                <a onclick="front.openTab(this, 'tab-3','.tabs')" class="tabs-list__item_link tab-links"
-                  title="Casino">Promotions</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-9 col-xs-12">
+        <div class="col-lg-9 col-xs-12">
           <div class="tabs-wrap">
             <div class="tab-content active" id="tab-0">
               <div class="accordion-container">
                 <div class="accordion__item active">
                   <a class="accordion__button open" href="#">
-                    What is an Affiliate Program?
+                    Why Enroll with a Poker Training Site?
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content" style="display: block">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Whether you play poker professionally or as a recreational pursuit, it’s only natural to want to
+                      win. As players get more experience under their belts and improve at the game, the competition
+                      naturally gets tougher, which is why it’s more important than ever to take steps to boost your own
+                      poker performance. Many opt to do this via reading poker books, but enrolling with one of the best
+                      poker training sites seems to be the preferred method nowadays.</p>
+                    <p>Who better to learn poker from than some of the biggest names in the game? Many of the best poker
+                      courses are offered by players who’ve proven over the years that they can win heaps, and who’ve
+                      put
+                      in the work and study time to ensure that they can stay in the upper echelons of success, both at
+                      the cash game tables as well as in tournament settings.</p>
+                  </div>
+                </div>
+                <div class="accordion__item">
+                  <a class="accordion__button" href="#">
+                    Pricing: Investing vs. Spending Money on Poker Training
+                    <i class="accordion__arrow"></i>
+                  </a>
+                  <div class="accordion__content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur architecto sit excepturi,
+                      doloremque error cumque ducimus recusandae ipsa in necessitatibus explicabo sunt? Architecto ad
+                      doloremque et minima nihil rerum labore, ut laborum? Deleniti, rem natus incidunt quod ducimus
+                      odit fuga nesciunt aliquid accusantium. Recusandae officia nisi velit amet praesentium ipsa fuga
+                      nam animi at unde, perspiciatis consequuntur maxime
                     </p>
                   </div>
                 </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    How do I earn money through your program?
+                    Conclusion
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat odit officia maiores sunt rerum
+                      sapiente, hic ea totam a distinctio quasi, quo placeat cupiditate optio aliquid libero et tempore
+                      amet minima consectetur maxime? Quaerat blanditiis minus, vitae saepe eius numquam perspiciatis
+                      sint doloremque, adipisci hic, optio ipsa voluptatem nesciunt ut.
                     </p>
                   </div>
                 </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    How to join the Affiliate Program?
+                    Summary
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion__item">
-                  <a class="accordion__button" href="#">
-                    How much can I earn as an affiliate?
-                    <i class="accordion__arrow"></i>
-                  </a>
-                  <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion__item">
-                  <a class="accordion__button" href="#">
-                    Will it cost me anything to become an affiliate?
-                    <i class="accordion__arrow"></i>
-                  </a>
-                  <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion__item">
-                  <a class="accordion__button" href="#">
-                    Is there a minimum commission withdrawal requirement?
-                    <i class="accordion__arrow"></i>
-                  </a>
-                  <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione eius a. Quae temporibus
+                      atque voluptatibus, quibusdam quas nihil ab, sit voluptatem deserunt ipsum consequatur iste
+                      eveniet eum corrupti iusto voluptate rerum voluptates repellendus culpa molestias a tenetur
+                      reiciendis? Odit tenetur illo vitae hic incidunt numquam perspiciatis iure a voluptas. Voluptates
+                      cum veniam rem quisquam voluptate, facere, voluptatibus est ipsum nobis ipsa culpa sint animi
+                      autem quod amet quaerat laudantium.
                     </p>
                   </div>
                 </div>
@@ -190,59 +92,63 @@
             </div>
             <div class="tab-content" id="tab-1">
               <div class="accordion-container">
+                <div class="accordion__item active">
+                  <a class="accordion__button open" href="#">
+                    Why Enroll with a Poker Training Site?
+                    <i class="accordion__arrow"></i>
+                  </a>
+                  <div class="accordion__content" style="display: block">
+                    <p>Whether you play poker professionally or as a recreational pursuit, it’s only natural to want to
+                      win. As players get more experience under their belts and improve at the game, the competition
+                      naturally gets tougher, which is why it’s more important than ever to take steps to boost your own
+                      poker performance. Many opt to do this via reading poker books, but enrolling with one of the best
+                      poker training sites seems to be the preferred method nowadays.</p>
+                    <p>Who better to learn poker from than some of the biggest names in the game? Many of the best poker
+                      courses are offered by players who’ve proven over the years that they can win heaps, and who’ve
+                      put
+                      in the work and study time to ensure that they can stay in the upper echelons of success, both at
+                      the cash game tables as well as in tournament settings.</p>
+                  </div>
+                </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    What is an Affiliate Program?
+                    Pricing: Investing vs. Spending Money on Poker Training
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur architecto sit excepturi,
+                      doloremque error cumque ducimus recusandae ipsa in necessitatibus explicabo sunt? Architecto ad
+                      doloremque et minima nihil rerum labore, ut laborum? Deleniti, rem natus incidunt quod ducimus
+                      odit fuga nesciunt aliquid accusantium. Recusandae officia nisi velit amet praesentium ipsa fuga
+                      nam animi at unde, perspiciatis consequuntur maxime
                     </p>
                   </div>
                 </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    How do I earn money through your program?
+                    Conclusion
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat odit officia maiores sunt rerum
+                      sapiente, hic ea totam a distinctio quasi, quo placeat cupiditate optio aliquid libero et tempore
+                      amet minima consectetur maxime? Quaerat blanditiis minus, vitae saepe eius numquam perspiciatis
+                      sint doloremque, adipisci hic, optio ipsa voluptatem nesciunt ut.
                     </p>
                   </div>
                 </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    What are the highest paying affiliate programs around?
+                    Summary
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion__item">
-                  <a class="accordion__button" href="#">
-                    Which programs pay commissions in Bitcoin?
-                    <i class="accordion__arrow"></i>
-                  </a>
-                  <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione eius a. Quae temporibus
+                      atque voluptatibus, quibusdam quas nihil ab, sit voluptatem deserunt ipsum consequatur iste
+                      eveniet eum corrupti iusto voluptate rerum voluptates repellendus culpa molestias a tenetur
+                      reiciendis? Odit tenetur illo vitae hic incidunt numquam perspiciatis iure a voluptas. Voluptates
+                      cum veniam rem quisquam voluptate, facere, voluptatibus est ipsum nobis ipsa culpa sint animi
+                      autem quod amet quaerat laudantium.
                     </p>
                   </div>
                 </div>
@@ -250,59 +156,63 @@
             </div>
             <div class="tab-content" id="tab-2">
               <div class="accordion-container">
+                <div class="accordion__item active">
+                  <a class="accordion__button open" href="#">
+                    Why Enroll with a Poker Training Site?
+                    <i class="accordion__arrow"></i>
+                  </a>
+                  <div class="accordion__content" style="display: block">
+                    <p>Whether you play poker professionally or as a recreational pursuit, it’s only natural to want to
+                      win. As players get more experience under their belts and improve at the game, the competition
+                      naturally gets tougher, which is why it’s more important than ever to take steps to boost your own
+                      poker performance. Many opt to do this via reading poker books, but enrolling with one of the best
+                      poker training sites seems to be the preferred method nowadays.</p>
+                    <p>Who better to learn poker from than some of the biggest names in the game? Many of the best poker
+                      courses are offered by players who’ve proven over the years that they can win heaps, and who’ve
+                      put
+                      in the work and study time to ensure that they can stay in the upper echelons of success, both at
+                      the cash game tables as well as in tournament settings.</p>
+                  </div>
+                </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    What is an Affiliate Program?
+                    Pricing: Investing vs. Spending Money on Poker Training
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur architecto sit excepturi,
+                      doloremque error cumque ducimus recusandae ipsa in necessitatibus explicabo sunt? Architecto ad
+                      doloremque et minima nihil rerum labore, ut laborum? Deleniti, rem natus incidunt quod ducimus
+                      odit fuga nesciunt aliquid accusantium. Recusandae officia nisi velit amet praesentium ipsa fuga
+                      nam animi at unde, perspiciatis consequuntur maxime
                     </p>
                   </div>
                 </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    How do I earn money through your program?
+                    Conclusion
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat odit officia maiores sunt rerum
+                      sapiente, hic ea totam a distinctio quasi, quo placeat cupiditate optio aliquid libero et tempore
+                      amet minima consectetur maxime? Quaerat blanditiis minus, vitae saepe eius numquam perspiciatis
+                      sint doloremque, adipisci hic, optio ipsa voluptatem nesciunt ut.
                     </p>
                   </div>
                 </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    What are the highest paying affiliate programs around?
+                    Summary
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion__item">
-                  <a class="accordion__button" href="#">
-                    Which programs pay commissions in Bitcoin?
-                    <i class="accordion__arrow"></i>
-                  </a>
-                  <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione eius a. Quae temporibus
+                      atque voluptatibus, quibusdam quas nihil ab, sit voluptatem deserunt ipsum consequatur iste
+                      eveniet eum corrupti iusto voluptate rerum voluptates repellendus culpa molestias a tenetur
+                      reiciendis? Odit tenetur illo vitae hic incidunt numquam perspiciatis iure a voluptas. Voluptates
+                      cum veniam rem quisquam voluptate, facere, voluptatibus est ipsum nobis ipsa culpa sint animi
+                      autem quod amet quaerat laudantium.
                     </p>
                   </div>
                 </div>
@@ -310,59 +220,63 @@
             </div>
             <div class="tab-content" id="tab-3">
               <div class="accordion-container">
+                <div class="accordion__item active">
+                  <a class="accordion__button open" href="#">
+                    Why Enroll with a Poker Training Site?
+                    <i class="accordion__arrow"></i>
+                  </a>
+                  <div class="accordion__content" style="display: block">
+                    <p>Whether you play poker professionally or as a recreational pursuit, it’s only natural to want to
+                      win. As players get more experience under their belts and improve at the game, the competition
+                      naturally gets tougher, which is why it’s more important than ever to take steps to boost your own
+                      poker performance. Many opt to do this via reading poker books, but enrolling with one of the best
+                      poker training sites seems to be the preferred method nowadays.</p>
+                    <p>Who better to learn poker from than some of the biggest names in the game? Many of the best poker
+                      courses are offered by players who’ve proven over the years that they can win heaps, and who’ve
+                      put
+                      in the work and study time to ensure that they can stay in the upper echelons of success, both at
+                      the cash game tables as well as in tournament settings.</p>
+                  </div>
+                </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    What is an Affiliate Program?
+                    Pricing: Investing vs. Spending Money on Poker Training
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur architecto sit excepturi,
+                      doloremque error cumque ducimus recusandae ipsa in necessitatibus explicabo sunt? Architecto ad
+                      doloremque et minima nihil rerum labore, ut laborum? Deleniti, rem natus incidunt quod ducimus
+                      odit fuga nesciunt aliquid accusantium. Recusandae officia nisi velit amet praesentium ipsa fuga
+                      nam animi at unde, perspiciatis consequuntur maxime
                     </p>
                   </div>
                 </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    How do I earn money through your program?
+                    Conclusion
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat odit officia maiores sunt rerum
+                      sapiente, hic ea totam a distinctio quasi, quo placeat cupiditate optio aliquid libero et tempore
+                      amet minima consectetur maxime? Quaerat blanditiis minus, vitae saepe eius numquam perspiciatis
+                      sint doloremque, adipisci hic, optio ipsa voluptatem nesciunt ut.
                     </p>
                   </div>
                 </div>
                 <div class="accordion__item">
                   <a class="accordion__button" href="#">
-                    What are the highest paying affiliate programs around?
+                    Summary
                     <i class="accordion__arrow"></i>
                   </a>
                   <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
-                    </p>
-                  </div>
-                </div>
-                <div class="accordion__item">
-                  <a class="accordion__button" href="#">
-                    Which programs pay commissions in Bitcoin?
-                    <i class="accordion__arrow"></i>
-                  </a>
-                  <div class="accordion__content">
-                    <p>The Partners.io Affiliate Program is a partnership between you and the operators: Bitcasino.io,
-                      Slots.io and Sportsbet.io The operators pay you a commission for any leads that are sent through
-                      your
-                      sites/social media/forums/links etc. Every referred customer that is active and produces revenue,
-                      generates profit for you.
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione eius a. Quae temporibus
+                      atque voluptatibus, quibusdam quas nihil ab, sit voluptatem deserunt ipsum consequatur iste
+                      eveniet eum corrupti iusto voluptate rerum voluptates repellendus culpa molestias a tenetur
+                      reiciendis? Odit tenetur illo vitae hic incidunt numquam perspiciatis iure a voluptas. Voluptates
+                      cum veniam rem quisquam voluptate, facere, voluptatibus est ipsum nobis ipsa culpa sint animi
+                      autem quod amet quaerat laudantium.
                     </p>
                   </div>
                 </div>
@@ -370,9 +284,8 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </section>
-
 </main>
 @@include('_footer.html')

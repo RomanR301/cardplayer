@@ -140,13 +140,7 @@
     } 
   }
 }
-.main-screen {
-  & .advertise-sidebar-container {
-    & .advertise-sidebar-item:first-child {
-      height: 350px;
-    }
-  }
-}
+
 .interviews {
   position: relative;
   padding: 60px 0;
@@ -202,18 +196,6 @@
     & .btn {
       @media (max-width: $breakpoint-md) {
         display: none;
-      }
-    }
-    & h2 {
-      position: relative;
-      &:before {
-        content: '';
-        height: 2px;
-        width: 30px;
-        background: #2C1959;
-        position: absolute;
-        bottom: -15px;
-        left: 0;
       }
     }
   }

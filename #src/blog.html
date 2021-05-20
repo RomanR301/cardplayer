@@ -1,100 +1,68 @@
 @@include('_header.html')
 <main>
-  <section class="blog-list">
+  <section class="blog">
     <div class="container">
-      <div class="row">
-        <div class="col-12 blog-heading">
-          <div class="section-icon">
-            <img src="./img/icons/icon-blog.svg" alt="blog icon">
-          </div>
-          <h2 class="section-heading">Blog Post</h2>
-          <p class="section-subheading">Certe inquam pertinax non</p>
+      <div class="main-screen__header">
+        <div class="d-flex">
+          <h1 class="section-title">Poker Article</h1>
+          <p class="section-subtitle">Find new, handpicked stories you’ll love, updated daily.</p>
         </div>
       </div>
+      <ul class="blog-links">
+        <li>
+          <a href="#" class="active">All</a>
+        </li>
+        <li>
+          <a href="#">Poker OP-EDS</a>
+        </li>
+        <li>
+          <a href="#">Poker News</a>
+        </li>
+        <li>
+          <a href="#">Poker Tips & Strategy</a>
+        </li>
+        <li>
+          <a href="#">Poker Course</a>
+        </li>
+        <li>
+          <a href="#">Poker</a>
+        </li>
+      </ul>
       <div class="row">
-        <div class="col-lg-8 col-xs-12">
-          <!-- <ul class="blog-categories">
-            <li><a class="blog-categories__link active" href="#">All</a></li>
-            <li><a class="blog-categories__link" href="#">Casino</a></li>
-            <li><a class="blog-categories__link" href="#">Sportsbook</a></li>
-            <li><a class="blog-categories__link" href="#">Bingo</a></li>
-            <li><a class="blog-categories__link" href="#">Poker</a></li>
-            <li><a class="blog-categories__link" href="#">Lottery</a></li>
-          </ul> -->
-          <div class="row blog-list-row">
-            <div class="col-lg-12 col-xs-12">
-              <a href="blog-detail.html" class="blog-item-wide">
-                <div class="blog-item-wide__image">
-                  <img src="./img/blog-image-wide2.jpg" alt="blog image">
-                </div>
-                <div class="blog-item-wide__content">
-                  <h2>Michigan Lawmakers Approve Regulations for Mobile Sports Betting, Online Casinos</h2>
-                  <p>As expected, Michigan lawmakers have signed off on regulations that will govern daily fantasy
-                    sports
-                    (DFS), online casinos, and mobile...</p>
-                  <div class="blog-item-wide__data">
-                    <div class="blog-item-wide__date">December 2, 2020</div>
-                    <div class="blog-item-wide__author">Todd Shriber</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            @@include('_blog-page-item-component.html')
-            @@include('_blog-page-item-component.html')
-            @@include('_blog-page-item-component.html')
-            @@include('_blog-page-item-component.html')
-            @@include('_blog-page-item-component.html')
-            @@include('_blog-page-item-component.html')
-            <div class="col-xs-12">
-              <div class="row pagination-container">
-                <div class="pagination">
-                  <a href="#" class="page-numbers prev-page">Prev</a>
-                  <a href="#" class="page-numbers active">1</a>
-                  <a href="#" class="page-numbers">2</a>
-                  <a href="#" class="page-numbers">3</a>
-                  <div class="page-numbers dots">...</div>
-                  <a href="#" class="page-numbers">9</a>
-                  <a href="#" class="page-numbers next-page">Next</a>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-9 col-xs-12">
+          <div class="blog-list row">
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
+            @@include('_blog-item-component.html')
           </div>
         </div>
-        <div class="col-lg-4 col-xs-12">
-          <div class="blog-advertising">
-            <div class="cards-item">
-              <a href="#" class="cards__image">
-                <img src="./img/card-image2.jpg" alt="rizk">
-              </a>
-              <div class="cards-content">
-                <a href="#" class="cards__title">betspin.com</a>
-                <div class="cards__description">
-                  Quae fuerit causa, nollem me ab illo inventore veritatis et
-                </div>
-                <div class="cards__rating">
-                  <div class="rating-stars">
-                    <div class="stars">
-                      <i class="star-filled"></i>
-                      <i class="star-filled"></i>
-                      <i class="star-filled"></i>
-                      <i class="star-filled"></i>
-                      <i class="star-filled"></i>
-                    </div>
-                    <span>(13)</span>
-                  </div>
-                </div>
-              </div>
-              <a href="#" class="btn btn-primary">
-                Sign Up Now
-              </a>
-            </div>
-            <div class="advertising-item advertising-small">Ads here</div>
-            <div class="advertising-item advertising-small">Ads here</div>
-            <div class="advertising-item advertising-small">Ads here</div>
-            <div class="advertising-item advertising-small">Ads here</div>
-          </div>
+        <div class="col-lg-3 col-xs-12 advertise-sidebar-container">
+          @@include('_advertise-sidebar-component.html')
+          @@include('_advertise-sidebar-component.html')
+          @@include('_advertise-sidebar-component.html')
+          @@include('_advertise-sidebar-component.html')
         </div>
       </div>
+      <nav class="navigation pagination" role="navigation">
+        <div class="pagination">
+          <a class="prev page-numbers" href="#"></a>
+          <a class="page-numbers" href="#">1</a>
+          <span aria-current="page" class="page-numbers current">2</span>
+          <a class="page-numbers" href="#">3</a>
+          <span class="page-numbers dots">...</span>
+          <a class="page-numbers" href="#">4</a>
+          <a class="next page-numbers" href="#"></a>
+        </div>
+      </nav>
     </div>
   </section>
 </main>

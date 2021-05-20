@@ -1,121 +1,96 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-// page header
-
-.page-header {
-  background: linear-gradient(90deg, #161B39 0%, #1A4540 100%);
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  &__bg {
-    padding: 60px 0 45px 0;
-    background-image: url('../img/background-grid.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  & h1, p {
-    color: $whiteColor;
-    @media (max-width: $breakpoint-lg) {
-      text-align: center;
-    }
-  }
-  & h1 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  & p {
-    opacity: 0.8;
-    width: 90%;
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    @media (max-width: $breakpoint-lg) {
-      width: 80%;
-      margin: auto;
-    }
-  }
-  & ul {
-    opacity: 0.8;
-    & li {
-      color: $whiteColor;
-      line-height: 1.3;
-    }
-  }
-}
-
-.overlaped-heading {
-  & .page-header__bg {
-    padding-bottom: 100px;
-    @media (max-width: $breakpoint-md) {
-      padding-top: 30px;
-    }
-  }
-  & .container-overlaped {
-    margin-top: -60px;
-  }
-}
-.breadcrumbs {
-  margin: 35px 0 20px 0;
-  display: flex;
-  align-items: center;
-  @media (max-width: $breakpoint-md) {
-    margin: 30px 0 16px 0;
-  }
-  & a {
-    color: #043E6F;
+.breadcrumbs-container {
+  height: 30px;
+  background: #D8D8D8;
+  & .container {
+    height: 100%;
     display: flex;
     align-items: center;
-    font-size: 12px;
-    &:hover {
-      color: $darkGreen;
-    }
+  }
+}
+.kama_breadcrumbs {
+  color: #000000;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  & a {
+    position: relative;
+    display: flex;
+    align-items: center;
     &:after {
       content: '/';
       display: block;
-      color: $defaultText;
-      margin: 0 8px;
+      margin: 0 4px;
+      color: #777777;
+    }
+    span{
+      font-size: 12px;
+      color: #777777;
     }
   }
-  & span {
-    color: $defaultText;
+  & .kb-title {
+    color: #000000;
     font-size: 12px;
   }
 }
 
-.socials-bar {
-  display: flex;
-  align-items: center;
-  & a {
-    display: block;
-    margin-right: 10px;
-    width: 32px;
-    height: 32px;
-    border-radius: 100%;
+.comments {
+  margin: 50px 0 40px 0;
+  & .section-title {
+    font-size: 24px;
+    margin-bottom: 44px;
+  }
+  &-item {
+    border: 1px solid #EBEBEB;
+    padding: 22px 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $whiteColor;
-    &:hover {
-      & img {
-        transform: scale(1.1);
+    align-items: flex-start;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      padding: 12px;
+    }
+  }
+  &-image {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 100%;
+    margin-right: 12px;
+    @media (max-width: $breakpoint-md) {
+      margin: 0 0 8px 0;
+    }
+    & img {
+      @include defaultIcon(cover);
+    }
+  }
+  &-content {
+    & h4 {
+      font-size: 16px;
+      color: $blackColor;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    & span {
+      margin-bottom: 4px;
+      display: block;
+      font-size: 12px;
+      color: #777777;
+    }
+    & p {
+      margin-bottom: 12px;
+      color: $blackColor;
+      font-size: 14px;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
-  & img {
-    width: 17px;
-    object-fit: contain;
-    display: block;
-    @include transition(.3);
-  }
-}
-.comments {
-  margin-top: 50px;
-  & h4 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: $defaultText;
-    font-weight: 500;
+  & form {
+    margin-top: 36px;
   }
   & .col-xs-12 {
     margin-bottom: 20px;
@@ -123,5 +98,27 @@
   & .form-textarea {
     height: 150px;
     margin-bottom: 20px;
+  }
+  & .btn-gradient {
+    width: 100px;
+  }
+}
+
+.socials-bar {
+  display: flex;
+  align-items: center;
+  & a {
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    @include transition(.3);
+  }
+  & i:before {
+    @include transition(.3);
   }
 }

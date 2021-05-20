@@ -1,0 +1,56 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  & .page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 350;
+    border-radius: 4px;
+    color: rgba(91, 81, 81, 0.5);
+    @include transition(.3);
+    margin: 0 5px;
+    text-decoration: none;
+    background: #F1F1F1;
+    &:hover {
+      background: #2C1959;
+      color: $whiteColor;
+    }
+    &.current {
+      color: #2C1959;
+      &:hover {
+        background: #F1F1F1;
+      }
+    }
+    &.prev, &.next {
+      width: 60px;
+      &:before {
+        font-size: 14px;
+        @include transition(.3);
+      }
+      &:hover {
+        background: #2C1959;
+        &:before {
+          color: $whiteColor;
+        }
+      }
+    }
+    &.prev {
+      &:before {
+        content: 'PREV'
+      }
+    }
+    &.next {
+      &:before {
+        content: 'NEXT'
+      }
+    }
+  }
+}

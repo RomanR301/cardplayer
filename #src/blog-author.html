@@ -1,0 +1,72 @@
+@@include('_header.html')
+<main class="blog-author-detail">
+  <section class="author">
+    <div class="container">
+      <div class="author-inner-box">
+        <div class="author__image">
+          <img src="./img/blog-author1.png" alt="author image">
+        </div>
+        <h1 class="author__name">ROBBIE STRAZYNSKI</h1>
+        <div class="author__position">
+          Robbie founded the Cardplayer Lifestyle poker blog in 2009.
+        </div>
+        <div class="socials-bar">
+          <a href="#"><i class="icon-icon-instagram"></i></a>
+          <a href="#"><i class="icon-icon-facebook"></i></a>
+          <a href="#"><i class="icon-icon-twitter"></i></a>
+          <a href="#"><i class="icon-icon-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="blog">
+    <div class="container">
+      <ul class="blog-links">
+        <li>
+          <a href="#" class="active">All</a>
+        </li>
+        <li>
+          <a href="#">Poker OP-EDS</a>
+        </li>
+        <li>
+          <a href="#">Poker News</a>
+        </li>
+        <li>
+          <a href="#">Poker Tips & Strategy</a>
+        </li>
+        <li>
+          <a href="#">Poker Course</a>
+        </li>
+        <li>
+          <a href="#">Poker</a>
+        </li>
+      </ul>
+      <div class="row">
+        <div class="col-lg-12 col-xs-12">
+          <div class="blog-list row">
+            @@include('_blog-item-component-4.html')
+            @@include('_blog-item-component-4.html')
+            @@include('_blog-item-component-4.html')
+            @@include('_blog-item-component-4.html')
+            @@include('_blog-item-component-4.html')
+            @@include('_blog-item-component-4.html')
+            @@include('_blog-item-component-4.html')
+            @@include('_blog-item-component-4.html')
+          </div>
+        </div>
+      </div>
+      <nav class="navigation pagination" role="navigation">
+        <div class="pagination">
+          <a class="prev page-numbers" href="#"></a>
+          <a class="page-numbers" href="#">1</a>
+          <span aria-current="page" class="page-numbers current">2</span>
+          <a class="page-numbers" href="#">3</a>
+          <span class="page-numbers dots">...</span>
+          <a class="page-numbers" href="#">4</a>
+          <a class="next page-numbers" href="#"></a>
+        </div>
+      </nav>
+    </div>
+  </section>
+</main>
+@@include('_footer.html')

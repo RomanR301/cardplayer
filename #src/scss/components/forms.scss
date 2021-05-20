@@ -23,15 +23,13 @@
     color: inherit;
     font-size: 12px;
     font-family: inherit;
+    font-weight: inherit;
     outline: none;
     border: 2px solid transparent;
     background: #FBFBFB;
     border: 1px solid #C1C1C1;
     border-radius: 2px;
     @include transition(.3);
-    // &:focus {
-    //   border-color: $whiteColor;
-    // }
   }
   & input {
     height: 40px;

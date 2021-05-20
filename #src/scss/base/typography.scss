@@ -39,6 +39,18 @@
   font-size: 14px;
   color: #777777;
 }
+.section-title-decor {
+  position: relative;
+  &:before {
+    content: '';
+    height: 2px;
+    width: 30px;
+    background: #2C1959;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+  }
+}
 
 .icon-icon-search:before {
   content: "\e900";

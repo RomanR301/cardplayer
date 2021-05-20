@@ -1,7 +1,4 @@
 .accordion {
-  &-container {
-
-  }
   &__item {
     position: relative;
     width: 100%;
@@ -11,9 +8,6 @@
         opacity: 0;
         visibility: hidden;
       }
-      & i:after {
-        // transform: rotate(225deg);
-      }
     }
   }
   &__content {
@@ -21,7 +15,7 @@
     padding: 24px 0 16px 0;
     & p {
       margin-bottom: 16px;
-      line-height: 1.7;
+      line-height: 1.6;
       color: $defaultText;
       &:last-child {
         margin-bottom: 0;

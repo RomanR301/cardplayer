@@ -18,4 +18,26 @@
       background: #2C1959;
     }
   }
+  &-outline-white {
+    color: $blackColor;
+    border-color: $blackColor;
+    border-radius: 4px;
+    background: $whiteColor;
+    font-weight: 350;
+    &:hover {
+      color: $whiteColor;
+      border-color: transparent;
+      background: #40335C;
+    }
+  }
+  &-gradient {
+    background: linear-gradient(180deg, #40335C 0%, #1E172F 100%);
+    color: $whiteColor;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background: linear-gradient(180deg, #40335C 0%, #1E172F 50%);
+    }
+  }
 }
