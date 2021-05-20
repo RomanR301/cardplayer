@@ -1,0 +1,44 @@
+@@include('_header.html')
+<main>
+  <section class="books">
+    <div class="page-header books-header">
+      <img src="./img/books-bg.jpg" alt="background image" class="page-bg page-bg-desktop">
+      <img src="./img/books-bg-mobile.jpg" alt="background image" class="page-bg page-bg-mobile">
+      <div class="container">
+        <h1>Poker Books</h1>
+      </div>
+    </div>
+    <div class="books-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-xs-12">
+            @@include('_book-component.html')
+            @@include('_book-component.html')
+            @@include('_book-component.html')
+            @@include('_book-component.html')
+            @@include('_book-component.html')
+            @@include('_book-component.html')
+          </div>
+          <div class="col-lg-3 col-xs-12 advertise-sidebar-container">
+            @@include('_advertise-sidebar-component.html')
+            @@include('_advertise-sidebar-component.html')
+            @@include('_advertise-sidebar-component.html')
+            @@include('_advertise-sidebar-component.html')
+          </div>
+        </div>
+      </div>
+      <nav class="navigation pagination" role="navigation">
+        <div class="pagination">
+          <a class="prev page-numbers" href="#"></a>
+          <a class="page-numbers" href="#">1</a>
+          <span aria-current="page" class="page-numbers current">2</span>
+          <a class="page-numbers" href="#">3</a>
+          <span class="page-numbers dots">...</span>
+          <a class="page-numbers" href="#">4</a>
+          <a class="next page-numbers" href="#"></a>
+        </div>
+      </nav>
+    </div>
+  </section>
+</main>
+@@include('_footer.html')

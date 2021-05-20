@@ -40,4 +40,14 @@
       background: linear-gradient(180deg, #40335C 0%, #1E172F 50%);
     }
   }
+  &-purple {
+    background: #2C1959;
+    color: $whiteColor;
+    border-color: #2C1959;
+    border-radius: 4px;
+    &:hover {
+      background: #d1a643;
+      border-color: #d1a643;
+    }
+  }
 }

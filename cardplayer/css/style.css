@@ -538,6 +538,18 @@ input[type=number] {
   background: linear-gradient(180deg, #40335C 0%, #1E172F 50%);
 }
 
+.btn-purple {
+  background: #2C1959;
+  color: #ffffff;
+  border-color: #2C1959;
+  border-radius: 4px;
+}
+
+.btn-purple:hover {
+  background: #d1a643;
+  border-color: #d1a643;
+}
+
 .newsletter {
   z-index: 55;
   position: absolute;
@@ -764,10 +776,9 @@ input[type=number] {
   font-family: inherit;
   font-weight: inherit;
   outline: none;
-  border: 2px solid transparent;
   background: #FBFBFB;
   border: 1px solid #C1C1C1;
-  border-radius: 2px;
+  border-radius: 4px;
   transition: all 0.3s ease-out;
 }
 
@@ -785,19 +796,20 @@ input[type=number] {
 }
 
 .phone-container:before {
-  font-family: 'icomoon';
-  content: "\e901";
-  font-size: 10px;
+  content: '';
+  background: no-repeat center url("../img/icons/arrow-black.svg");
+  width: 10px;
+  height: 10px;
   position: absolute;
   left: 37px;
-  top: 13px;
+  top: 15px;
   pointer-events: none;
 }
 
 .phone-container select {
   background: #FFFFFF;
   border: 1px solid #C1C1C1;
-  border-radius: 2px 0 0 2px;
+  border-radius: 4px 0 0 4px;
   width: 60px;
   border-right: 0;
   padding: 10px 20px 10px 10px;
@@ -807,7 +819,7 @@ input[type=number] {
 }
 
 .phone-container input {
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .form-checkbox {
@@ -1624,7 +1636,7 @@ input[type=number] {
 }
 
 .body-padding {
-  height: 110px;
+  height: 109px;
 }
 
 .hamburger {
@@ -2918,7 +2930,7 @@ button.swiper-pagination-bullet {
 }
 
 .blog-detail-advertise {
-  background: #F1F1F1;
+  background: #f1f1f1;
   color: #777777;
   display: flex;
   align-items: center;
@@ -2933,13 +2945,13 @@ button.swiper-pagination-bullet {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #ebebeb;
   padding-bottom: 24px;
   margin-bottom: 24px;
 }
 
 .blog-detail-author__favourite {
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   padding: 9px 18px;
   border-radius: 16px;
   display: flex;
@@ -2949,12 +2961,12 @@ button.swiper-pagination-bullet {
 }
 
 .blog-detail-author__favourite:hover {
-  background: #EBEBEB;
+  background: #ebebeb;
 }
 
 .blog-detail-author__favourite span {
   padding-bottom: 3px;
-  color: #2C1959;
+  color: #2c1959;
 }
 
 .blog-detail-author__favourite i {
@@ -2962,27 +2974,27 @@ button.swiper-pagination-bullet {
 }
 
 .blog-detail-author__favourite i:before {
-  color: #2C1959;
+  color: #2c1959;
 }
 
 .blog-detail-author .socials-bar a {
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   background: transparent;
 }
 
 .blog-detail-author .socials-bar a:hover {
-  background: #EBEBEB;
+  background: #ebebeb;
 }
 
 .blog-detail-author .socials-bar i:before {
-  color: #2C1959;
+  color: #2c1959;
 }
 
 .blog-detail__quote {
   display: flex;
   padding-bottom: 24px;
   margin-bottom: 50px;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .blog-detail__quote_image {
@@ -3007,7 +3019,7 @@ button.swiper-pagination-bullet {
 .blog-detail__quote .writte-by {
   font-size: 12px;
   margin-bottom: 8px;
-  font-family: 'AppleChanceryRegular', sans-serif;
+  font-family: "AppleChanceryRegular", sans-serif;
 }
 
 .blog-detail__quote h2 {
@@ -3043,13 +3055,13 @@ button.swiper-pagination-bullet {
   color: #777777;
   border-radius: 3px;
   font-size: 12px;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   margin: 0 10px 10px 0;
   transition: all 0.3s ease-out;
 }
 
 .tags__item:hover {
-  background: #EBEBEB;
+  background: #ebebeb;
 }
 
 .blog-recommendations .section-title {
@@ -3072,6 +3084,13 @@ button.swiper-pagination-bullet {
   font-size: 18px;
   font-weight: 700;
   margin: 10px 0 16px 0;
+}
+
+.entry-content h4 {
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 24px;
+  font-weight: 700;
 }
 
 .entry-content p {
@@ -3137,6 +3156,16 @@ button.swiper-pagination-bullet {
   direction: rtl;
 }
 
+.entry-content blockquote {
+  padding: 12px 16px;
+  background: #f7f7f7;
+  color: #333333;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
 .entry-content-advertise {
   display: flex;
   margin: 14px -11px 36px -11px;
@@ -3145,7 +3174,7 @@ button.swiper-pagination-bullet {
 .entry-content-advertise__item {
   flex: 1;
   min-height: 250px;
-  background: #F1F1F1;
+  background: #f1f1f1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3158,7 +3187,7 @@ button.swiper-pagination-bullet {
 
 .author {
   padding: 44px 0 36px 0;
-  background: #F1F1F1;
+  background: #f1f1f1;
 }
 
 .author .container {
@@ -3203,7 +3232,7 @@ button.swiper-pagination-bullet {
   color: #777777;
   font-size: 14px;
   margin-bottom: 16px;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .author .socials-bar {
@@ -3211,7 +3240,7 @@ button.swiper-pagination-bullet {
 }
 
 .author .socials-bar a {
-  background: #2F1F55;
+  background: #2f1f55;
 }
 
 .author .socials-bar a:hover {
@@ -3226,9 +3255,83 @@ button.swiper-pagination-bullet {
   margin: 20px 0 50px 0;
 }
 
+.interview-detail .preview-image {
+  width: 152px;
+  height: 152px;
+  float: left;
+  margin: 0 24px 0 0;
+}
+
+.interview-detail .preview-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.interview-detail .entry-content img {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.podcast-detail .podcast-video {
+  margin-bottom: 24px;
+}
+
+.podcast-detail .podcast-video iframe {
+  margin-bottom: 30px;
+}
+
+.podcast-detail .podcast-video .section-title {
+  margin-bottom: 40px;
+}
+
+.podcast-detail .podcast-time-stamps .time-stamp {
+  padding: 15px;
+  display: flex;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.podcast-detail .podcast-time-stamps .time-stamp:first-child {
+  border-top: 1px solid #EDEDED;
+}
+
+.podcast-detail .podcast-time-stamps .time-stamp span {
+  width: 70px;
+  min-width: 70px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.podcast-detail .podcast-time-stamps .time-stamp p {
+  font-size: 16px;
+}
+
+.podcast-detail .podcast-time-stamps .time-stamp:nth-child(odd) {
+  background: #FAFAFA;
+}
+
+.podcast-detail .podcast-time-stamps .time-stamp:nth-child(even) {
+  background: #ffffff;
+}
+
+.overlaped-heading h1 {
+  margin-bottom: 60px;
+}
+
+.overlaped-heading .container-overlaped {
+  margin-top: -70px;
+}
+
+.contacts {
+  margin-bottom: 150px;
+}
+
 .contacts-box {
   background: #ffffff;
-  padding: 32px 30px;
+  padding: 32px 90px;
   box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.1);
   border-radius: 6px;
   border: 1px solid #EBEBEB;
@@ -3244,11 +3347,13 @@ button.swiper-pagination-bullet {
 }
 
 .contacts .form-submit {
-  width: 150px;
+  width: 100px;
+  height: 44px;
 }
 
 .contacts .form-submit button {
   width: 100%;
+  height: 100%;
 }
 
 .faq {
@@ -3305,7 +3410,7 @@ button.swiper-pagination-bullet {
 .other-page {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(90deg, #161b39 0, #1a4540 64.23%);
+  background: linear-gradient(180deg, #40335C 0%, #1E172F 100%);
   overflow: hidden;
 }
 
@@ -3330,9 +3435,129 @@ button.swiper-pagination-bullet {
   color: #ffffff;
 }
 
+.other-page .btn {
+  border-color: #ffffff;
+}
+
 .other-page .btn:hover {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
   border-color: #ffffff;
   background: #ffffff;
+  color: #333333;
+}
+
+.page-header {
+  height: 200px;
+  position: relative;
+}
+
+.page-header .container {
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header .container h1 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 32px;
+  position: relative;
+}
+
+.page-header .container h1:before {
+  content: '';
+  background: #ffffff;
+  width: 18%;
+  height: 1px;
+  bottom: -10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.page-header.books-header {
+  height: 160px;
+}
+
+.page-header.contacts-header {
+  height: 210px;
+}
+
+.page-bg {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-bg-mobile {
+  display: none;
+}
+
+.books-content {
+  margin: 50px 0;
+}
+
+.books-content .advertise-sidebar-container {
+  margin-top: 0;
+}
+
+.books-content .pagination {
+  margin-top: 20px;
+}
+
+.books-item {
+  border: 0.5px solid #EBEBEB;
+  display: flex;
+  padding: 16px;
+  background: #F1F1F1;
+  margin-bottom: 24px;
+  border-radius: 6px;
+}
+
+.books__image {
+  margin-right: 16px;
+  width: 126px;
+  height: 190px;
+  min-width: 126px;
+}
+
+.books__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.books__title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  max-width: 85%;
+}
+
+.books__text {
+  font-size: 14px;
+  line-height: 22px;
+  color: #777777;
+  margin-bottom: 16px;
+  max-width: 85%;
+}
+
+.books__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.books__buttons {
+  margin-bottom: 16px;
 }
 
 @media (min-width: 768px) {
@@ -4091,12 +4316,71 @@ button.swiper-pagination-bullet {
     margin: 10px 0 20px 0;
   }
 
+  .podcast-detail .podcast-video iframe {
+    width: 320px;
+    height: 180px;
+  }
+
+  .contacts {
+    margin-bottom: 50px;
+  }
+
   .contacts-box {
     padding: 32px 16px;
   }
 
   .other-page h1 {
     font-size: 60px;
+  }
+
+  .page-header .container h1 {
+    margin-bottom: 30px;
+  }
+
+  .books-content {
+    margin: 16px 0 40px 0;
+  }
+
+  .books-content .advertise-sidebar-container {
+    display: none;
+  }
+
+  .books-item {
+    padding: 12px;
+  }
+
+  .books__title {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+  }
+
+  .books__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+  }
+
+  .books__buttons {
+    margin-bottom: 0;
+  }
+
+  .books__buttons .btn {
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .books__buttons .btn:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -4135,5 +4419,13 @@ button.swiper-pagination-bullet {
 
   .author-inner-box {
     width: 100%;
+  }
+
+  .page-bg-desktop {
+    display: none;
+  }
+
+  .page-bg-mobile {
+    display: block;
   }
 }

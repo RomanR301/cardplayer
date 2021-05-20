@@ -1,0 +1,144 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.page {
+  &-header {
+    height: 200px;
+    position: relative;
+    & .container {
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & h1 {
+        color: $whiteColor;
+        font-weight: 700;
+        font-size: 32px;
+        position: relative;
+        @media (max-width: $breakpoint-md) {
+          margin-bottom: 30px;
+        }
+        &:before {
+          content: '';
+          background: $whiteColor;
+          width: 18%;
+          height: 1px;
+          bottom: -10px;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+    &.books-header {
+      height: 160px;
+    }
+    &.contacts-header {
+      height: 210px;
+    }
+  }
+  &-bg{
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &-desktop {
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+    &-mobile {
+      display: none;
+      @media (max-width: $breakpoint-sm) {
+        display: block;
+      }
+    }
+  }
+}
+
+.books {
+  &-content {
+    margin: 50px 0;
+    @media (max-width: $breakpoint-md) {
+      margin: 16px 0 40px 0;
+    }
+    & .advertise-sidebar-container {
+      margin-top: 0;
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+    & .pagination {
+      margin-top: 20px;
+    }
+  }
+  &-item {
+    border: 0.5px solid #EBEBEB;
+    display: flex;
+    padding: 16px;
+    background: #F1F1F1;
+    margin-bottom: 24px;
+    border-radius: 6px;
+    @media (max-width: $breakpoint-md) {
+      padding: 12px;
+    }
+  }
+  &__image {
+    margin-right: 16px;
+    width: 126px;
+    height: 190px;
+    min-width: 126px;
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+  &__title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $blackColor;
+    max-width: 85%;
+    @media (max-width: $breakpoint-md) {
+      font-size: 16px;
+      @include text-ellipsis(3);
+      max-width: 100%;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #777777;
+    margin-bottom: 16px;
+    max-width: 85%;
+    @media (max-width: $breakpoint-md) {
+      @include text-ellipsis(3);
+      max-width: 100%;
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__buttons {
+    margin-bottom: 16px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+    & .btn {
+      @media (max-width: $breakpoint-md) {
+        padding: 8px 12px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
